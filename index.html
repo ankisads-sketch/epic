@@ -381,6 +381,21 @@
       background: rgba(7, 28, 43, 0.88);
     }
 
+    .control.is-locked {
+      pointer-events: none;
+      cursor: default;
+      color: var(--primary);
+      border-color: rgba(76, 214, 251, 0.28);
+      background: rgba(4, 24, 38, 0.82);
+    }
+
+    .field-hint {
+      margin: 0;
+      font-size: 0.74rem;
+      line-height: 1.5;
+      color: rgba(174, 239, 255, 0.62);
+    }
+
     .section-divider {
       border: 0;
       border-top: 1px solid rgba(144, 224, 239, 0.14);
@@ -930,6 +945,14 @@
           <label class="field">
             <span class="label">القسم</span>
             <input class="control" type="text" name="department" placeholder="اكتب القسم" required>
+          </label>
+          <label class="field">
+            <span class="label">المرحلة</span>
+            <select class="control is-locked" id="stageDisplay" aria-readonly="true" tabindex="-1">
+              <option value="المرحلة الأولى" selected>المرحلة الأولى</option>
+            </select>
+            <input type="hidden" name="stage" id="stage" value="المرحلة الأولى">
+            <p class="field-hint">المسابقة مخصصة لطلبة المرحلة الأولى فقط</p>
           </label>
           <label class="field full">
             <span class="label">اسم الفريق</span>
